@@ -1,0 +1,590 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Supermarket Sales Analysis Dashboard</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f6f9;
+            color: #263238;
+        }
+
+        header {
+            background: linear-gradient(135deg, #123c69, #1d6a96);
+            color: white;
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        header h1 {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 15px;
+            color: #e0eaf3;
+        }
+
+        .container {
+            width: 94%;
+            max-width: 1400px;
+            margin: 25px auto;
+        }
+
+        .section-title {
+            font-size: 23px;
+            margin: 30px 0 18px;
+            color: #123c69;
+            border-left: 5px solid #1d6a96;
+            padding-left: 12px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .card {
+            background: white;
+            padding: 23px;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+            border-bottom: 4px solid #1d6a96;
+        }
+
+        .card h3 {
+            font-size: 15px;
+            color: #64748b;
+            margin-bottom: 12px;
+        }
+
+        .card h2 {
+            font-size: 25px;
+            color: #123c69;
+            overflow-wrap: anywhere;
+        }
+
+        .chart-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+        }
+
+        .chart-container {
+            background: white;
+            padding: 22px;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+            min-width: 0;
+        }
+
+        .chart-container h3 {
+            color: #123c69;
+            margin-bottom: 18px;
+            font-size: 18px;
+        }
+
+        .chart-box {
+            position: relative;
+            height: 320px;
+        }
+
+        .insights {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+            line-height: 2;
+        }
+
+        .insights ul {
+            padding-left: 22px;
+        }
+
+        .insights li {
+            color: #475569;
+        }
+
+        .about {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+            line-height: 1.8;
+        }
+
+        .about p {
+            color: #475569;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background: #123c69;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 900px) {
+            .cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .chart-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            header h1 {
+                font-size: 23px;
+            }
+
+            .card h2 {
+                font-size: 22px;
+            }
+
+            .chart-box {
+                height: 270px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Supermarket Sales Analysis Dashboard</h1>
+    <p>Sales Performance | Profit Analysis | Customer Insights</p>
+</header>
+
+<div class="container">
+
+    <!-- SALES OVERVIEW -->
+    <h2 class="section-title">Sales Overview</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Total Sales Revenue</h3>
+            <h2>₹{{ "{:,.2f}".format(total_sales) }}</h2>
+        </div>
+
+        <div class="card">
+            <h3>Total Gross Profit</h3>
+            <h2>₹{{ "{:,.2f}".format(total_profit) }}</h2>
+        </div>
+
+        <div class="card">
+            <h3>Total Orders</h3>
+            <h2>{{ "{:,}".format(total_orders) }}</h2>
+        </div>
+
+        <div class="card">
+            <h3>Profit Margin</h3>
+            <h2>{{ profit_margin }}%</h2>
+        </div>
+
+        <div class="card">
+            <h3>Total Units Sold</h3>
+            <h2>{{ "{:,}".format(total_units) }}</h2>
+        </div>
+
+        <div class="card">
+            <h3>Total Transactions</h3>
+            <h2>{{ "{:,}".format(total_records) }}</h2>
+        </div>
+
+        <div class="card">
+            <h3>Total Customers</h3>
+            <h2>{{ "{:,}".format(total_customers) }}</h2>
+        </div>
+
+        <div class="card">
+            <h3>Average Order Value</h3>
+            <h2>
+                ₹{{ "{:,.2f}".format(
+                    total_sales / total_orders if total_orders else 0
+                ) }}
+            </h2>
+        </div>
+
+    </div>
+
+    <!-- SALES AND PROFIT ANALYSIS -->
+    <h2 class="section-title">Sales & Profit Analysis</h2>
+
+    <div class="chart-grid">
+
+        <div class="chart-container">
+            <h3>Category-wise Sales Revenue</h3>
+            <div class="chart-box">
+                <canvas id="salesChart"></canvas>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <h3>Category-wise Gross Profit</h3>
+            <div class="chart-box">
+                <canvas id="profitChart"></canvas>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- MONTHLY SALES -->
+    <h2 class="section-title">Monthly Sales Analysis</h2>
+
+    <div class="chart-container">
+        <h3>Monthly Sales Revenue Trend</h3>
+        <div class="chart-box">
+            <canvas id="monthlyChart"></canvas>
+        </div>
+    </div>
+
+    <!-- CUSTOMER ANALYSIS -->
+    <h2 class="section-title">Customer Analysis</h2>
+
+    <div class="chart-grid">
+
+        <div class="chart-container">
+            <h3>Gender-wise Customer Analysis</h3>
+            <div class="chart-box">
+                <canvas id="genderChart"></canvas>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <h3>Age Group-wise Customer Analysis</h3>
+            <div class="chart-box">
+                <canvas id="ageChart"></canvas>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <h3>Customer Segment Analysis</h3>
+            <div class="chart-box">
+                <canvas id="segmentChart"></canvas>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <h3>Top 10 Customers by Sales</h3>
+            <div class="chart-box">
+                <canvas id="topCustomersChart"></canvas>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- KEY BUSINESS INSIGHTS -->
+    <h2 class="section-title">Key Business Insights</h2>
+
+    <div class="insights">
+        <ul>
+            <li>
+                Total Sales Revenue:
+                ₹{{ "{:,.2f}".format(total_sales) }}
+            </li>
+
+            <li>
+                Total Gross Profit:
+                ₹{{ "{:,.2f}".format(total_profit) }}
+            </li>
+
+            <li>
+                Total Orders:
+                {{ "{:,}".format(total_orders) }}
+            </li>
+
+            <li>
+                Total Customers:
+                {{ "{:,}".format(total_customers) }}
+            </li>
+
+            <li>
+                Profit Margin: {{ profit_margin }}%
+            </li>
+
+            {% if chart_labels %}
+            <li>
+                Top Sales Category:
+                {{ chart_labels[0] }} –
+                ₹{{ "{:,.2f}".format(chart_values[0]) }}
+            </li>
+            {% endif %}
+
+            {% if top_customer_labels %}
+            <li>
+                Highest Spending Customer:
+                {{ top_customer_labels[0] }} –
+                ₹{{ "{:,.2f}".format(top_customer_values[0]) }}
+            </li>
+            {% endif %}
+        </ul>
+    </div>
+
+    <!-- ABOUT PROJECT -->
+    <h2 class="section-title">About Project</h2>
+
+    <div class="about">
+        <p>
+            This project focuses on analyzing supermarket sales data
+            to understand business performance, product sales,
+            profitability and customer behavior.
+        </p>
+
+        <p>
+            The dashboard presents interactive visualizations for
+            category-wise sales, profit analysis, monthly sales trends
+            and customer segmentation.
+        </p>
+
+        <p>
+            <strong>Tools & Technologies:</strong>
+            Python, Pandas, Flask, HTML, CSS, JavaScript and Chart.js.
+        </p>
+
+        <p>
+            <strong>Project Type:</strong> Data Analyst Project
+        </p>
+    </div>
+
+</div>
+
+<footer>
+    <p>Supermarket Sales Analysis | Data Analyst Project</p>
+</footer>
+
+
+<script>
+    // Data from Flask
+    const categoryLabels = {{ chart_labels | tojson }};
+    const categorySales = {{ chart_values | tojson }};
+    const categoryProfit = {{ profit_values | tojson }};
+
+    const monthlyLabels = {{ monthly_labels | tojson }};
+    const monthlySales = {{ monthly_values | tojson }};
+
+    const genderLabels = {{ gender_labels | tojson }};
+    const genderValues = {{ gender_values | tojson }};
+
+    const ageLabels = {{ age_labels | tojson }};
+    const ageValues = {{ age_values | tojson }};
+
+    const segmentLabels = {{ segment_labels | tojson }};
+    const segmentValues = {{ segment_values | tojson }};
+
+    const topCustomerLabels = {{ top_customer_labels | tojson }};
+    const topCustomerValues = {{ top_customer_values | tojson }};
+
+
+    // Common chart options
+    const commonOptions = {
+        responsive: true,
+        maintainAspectRatio: false
+    };
+
+
+    // Category-wise Sales Chart
+    new Chart(document.getElementById("salesChart"), {
+        type: "bar",
+        data: {
+            labels: categoryLabels,
+            datasets: [{
+                label: "Sales Revenue (₹)",
+                data: categorySales,
+                backgroundColor: "#2878b5",
+                borderRadius: 5
+            }]
+        },
+        options: {
+            ...commonOptions,
+            plugins: {
+                legend: {
+                    display: false
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+
+    // Category-wise Profit Chart
+    new Chart(document.getElementById("profitChart"), {
+        type: "bar",
+        data: {
+            labels: categoryLabels,
+            datasets: [{
+                label: "Gross Profit (₹)",
+                data: categoryProfit,
+                backgroundColor: "#27ae60",
+                borderRadius: 5
+            }]
+        },
+        options: {
+            ...commonOptions,
+            plugins: {
+                legend: {
+                    display: false
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+
+    // Monthly Sales Trend
+    new Chart(document.getElementById("monthlyChart"), {
+        type: "line",
+        data: {
+            labels: monthlyLabels,
+            datasets: [{
+                label: "Monthly Sales Revenue (₹)",
+                data: monthlySales,
+                borderColor: "#2878b5",
+                backgroundColor: "rgba(40,120,181,0.15)",
+                fill: true,
+                tension: 0.3,
+                pointRadius: 3
+            }]
+        },
+        options: {
+            ...commonOptions,
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+
+    // Gender-wise Customer Analysis
+    new Chart(document.getElementById("genderChart"), {
+        type: "doughnut",
+        data: {
+            labels: genderLabels,
+            datasets: [{
+                data: genderValues,
+                backgroundColor: [
+                    "#2878b5",
+                    "#e67e22",
+                    "#27ae60",
+                    "#8e44ad"
+                ]
+            }]
+        },
+        options: commonOptions
+    });
+
+
+    // Age Group-wise Customer Analysis
+    new Chart(document.getElementById("ageChart"), {
+        type: "bar",
+        data: {
+            labels: ageLabels,
+            datasets: [{
+                label: "Number of Customers",
+                data: ageValues,
+                backgroundColor: "#8e44ad",
+                borderRadius: 5
+            }]
+        },
+        options: {
+            ...commonOptions,
+            plugins: {
+                legend: {
+                    display: false
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+
+    // Customer Segment Analysis
+    new Chart(document.getElementById("segmentChart"), {
+        type: "pie",
+        data: {
+            labels: segmentLabels,
+            datasets: [{
+                data: segmentValues,
+                backgroundColor: [
+                    "#2878b5",
+                    "#e67e22",
+                    "#27ae60",
+                    "#8e44ad",
+                    "#d35400",
+                    "#16a085"
+                ]
+            }]
+        },
+        options: commonOptions
+    });
+
+
+    // Top 10 Customers by Sales
+    new Chart(document.getElementById("topCustomersChart"), {
+        type: "bar",
+        data: {
+            labels: topCustomerLabels,
+            datasets: [{
+                label: "Sales Revenue (₹)",
+                data: topCustomerValues,
+                backgroundColor: "#e67e22",
+                borderRadius: 5
+            }]
+        },
+        options: {
+            ...commonOptions,
+            indexAxis: "y",
+            plugins: {
+                legend: {
+                    display: false
+                }
+            },
+            scales: {
+                x: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+</script>
+
+</body>
+</html>

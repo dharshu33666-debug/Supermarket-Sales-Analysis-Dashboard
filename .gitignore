@@ -1,0 +1,6 @@
+.env
+venv/
+__pycache__/
+*.pyc
+supermarket_large_dataset.csv
+supermarket_cleaned_dataset.csv

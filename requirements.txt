@@ -1,0 +1,5 @@
+pandas
+numpay
+matplotlib
+seaborn
+flask
