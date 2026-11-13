@@ -1,194 +1,224 @@
-🛒 Supermarket Sales Analysis Dashboard
+# Supermarket Sales Analysis Dashboard
 
-📌 Project Overview
+## 📌 Project Overview
 
-The Supermarket Sales Analysis Dashboard is a data analysis and visualization project developed using Python, Pandas, Flask, HTML, CSS, JavaScript, and Chart.js.
+The **Supermarket Sales Analysis Dashboard** is a data analysis and visualization project developed using Python, Pandas, Flask, HTML, CSS, JavaScript, and Chart.js.
 
-This project uses a supermarket sales dataset downloaded from Kaggle. The dataset is processed and analyzed to identify important sales and profit metrics.
+This project uses a supermarket sales dataset downloaded from Kaggle. The dataset is cleaned, processed, and analyzed to identify important business metrics, including sales revenue, gross profit, orders, customers, and product category performance.
 
-An interactive web dashboard presents the analysis results through summary cards, product images, and graphical visualizations.
+An interactive web dashboard presents the analysis results through summary cards and graphical visualizations, helping users understand supermarket business performance.
 
-🎯 Project Objectives
+## 🎯 Project Objectives
 
 - Analyze supermarket sales data.
-- Calculate total sales and total profit.
-- Identify the total number of orders.
-- Calculate the profit margin.
-- Visualize sales and profit performance.
+- Calculate total sales revenue and gross profit.
+- Identify the total number of orders and customers.
+- Analyze product category sales performance.
+- Visualize monthly sales and profit trends.
 - Present key business metrics through an interactive dashboard.
-- Improve understanding of data analysis and visualization using Python.
+- Generate meaningful business insights from the dataset.
 
-📊 Dataset
+## 📊 Dataset
 
-- Dataset Source: Kaggle
-- File Format: CSV
-- Dataset File: "supermarket_large_dataset.csv"
+- **Dataset Source:** [Kaggle – Supermarket Dataset](https://www.kaggle.com/datasets/datascikhan/supermarket)
+- **Dataset File:** `supermarket_large_dataset.csv`
+- **File Format:** CSV
 
-The dataset is used to analyze supermarket sales information and generate meaningful business insights.
+The dataset contains detailed supermarket information, including customer details, products, transactions, sales, profit, inventory, and other business-related attributes.
 
-Note: Add the original Kaggle dataset URL here so users can access the source dataset.
+**Note:** The original and cleaned CSV files are not included in this GitHub repository because of their large file sizes. Download the dataset from Kaggle and place the required CSV files in the project folder before running the application.
 
-🛠️ Technologies Used
+## 🛠️ Technologies Used
 
-- Python — Data processing and application development
-- Pandas — Data cleaning, manipulation, and analysis
-- Flask — Web application framework
-- HTML — Dashboard structure
-- CSS — Dashboard styling
-- JavaScript — Interactive functionality
-- Chart.js — Sales and profit charts
-- Matplotlib — Data visualization
-- CSV — Dataset storage
+- **Python** – Programming and data processing
+- **Pandas** – Data cleaning and analysis
+- **Flask** – Web application framework
+- **Matplotlib** – Data visualization
+- **HTML** – Dashboard structure
+- **CSS** – Dashboard styling
+- **JavaScript** – Interactive functionality
+- **Chart.js** – Interactive charts
+- **CSV** – Dataset storage
 
-✨ Key Features
+## ✨ Key Features
 
-1. Total Sales
+1. **Total Sales Revenue** – Displays the total sales revenue.
+2. **Total Gross Profit** – Shows the total gross profit generated.
+3. **Total Orders** – Displays the total number of orders.
+4. **Total Customers** – Shows the number of customers.
+5. **Product Category Analysis** – Compares sales across product categories.
+6. **Monthly Sales Analysis** – Visualizes monthly sales performance.
+7. **Profit Analysis** – Presents profit information through charts.
+8. **Top Products Analysis** – Highlights top-performing products.
+9. **Interactive Dashboard** – Displays business metrics and visualizations in a user-friendly interface.
 
-Displays the total sales revenue calculated from the dataset.
+## 📈 Key Business Insights
 
-2. Total Profit
+The analysis generated the following results:
 
-Displays the total profit calculated using the available sales and profit information.
+| Business Metric | Result |
+|---|---:|
+| Total Sales Revenue | ₹9,995,644.58 |
+| Total Gross Profit | ₹3,770,441.83 |
+| Total Orders | 45,500 |
+| Total Customers | 75,799 |
+| Units Sold | 1,021,188 |
 
-3. Total Orders
+**Top Sales Category:** Grocery – ₹506,229.87
 
-Displays the total number of orders based on the available order information.
+*Note: These are results from the dataset used in this project.*
 
-4. Profit Margin
+## 📂 Project Structure
 
-Displays the profit margin as a percentage of sales.
+```text
+Supermarket-Sales-Analysis/
+│
+├── app.py
+├── data_cleaning.py
+├── sales_analysis.py
+├── sales_summary.csv
+├── README.md
+├── requirements.txt
+├── .gitignore
+│
+├── templates/
+│   └── index.html
+│
+└── static/
+    ├── category_sales_chart.png
+    ├── monthly_sales_chart.png
+    ├── profit_chart.png
+    ├── sales_revenue_chart.png
+    └── top_products_chart.png
+```
 
-5. Product Cards
+**Note:** The large original and cleaned dataset CSV files are stored locally and excluded from GitHub using `.gitignore`.
 
-Displays product category cards with images and descriptions.
+## ⚙️ Installation and Setup
 
-6. Sales Analysis Chart
+### Step 1: Install Python
 
-Visualizes sales information to help users understand sales performance.
+Install Python 3 on your computer.
 
-7. Profit Analysis Chart
+### Step 2: Clone the Repository
 
-Displays profit information for easier comparison and analysis.
-
-8. Sales Revenue Chart
-
-Presents sales revenue through a Python-generated chart.
-
-9. Interactive Dashboard
-
-Displays key metrics and visualizations in a user-friendly web interface.
-
-📂 Project Structure
-
-- Supermarket-Sales-Analysis/
-  - "app.py"
-  - "sales_analysis.py"
-  - "sales_summary.csv"
-  - templates/
-    - "index.html"
-  - static/
-    - "sales_revenue_chart.png"
-    - "groceries.jpg"
-  - "README.md"
-
-The project structure above is an example. Update the file list to match the files actually present in your repository.
-
-⚙️ Installation and Setup
-
-Step 1: Install Python
-
-Install Python on your computer if it is not already installed.
-
-Step 2: Download the Project
-
-Clone the GitHub repository:
-
-git clone YOUR_GITHUB_REPOSITORY_URL
+```bash
+git clone https://github.com/dharshu33666-debug/Supermarket-Sales-Analysis.git
+```
 
 Navigate to the project directory:
 
+```bash
 cd Supermarket-Sales-Analysis
+```
 
-Replace "YOUR_GITHUB_REPOSITORY_URL" with your actual GitHub repository URL.
+### Step 3: Create a Virtual Environment (Optional)
 
-Step 3: Install Required Libraries
+```bash
+python -m venv venv
+```
 
-Open the terminal in the project directory and run:
+Activate it on Windows:
 
-pip install flask pandas matplotlib
+```bash
+venv\Scripts\activate
+```
 
-Install any additional libraries required by the project.
+### Step 4: Install Required Libraries
 
-Step 4: Add the Dataset
+```bash
+pip install -r requirements.txt
+```
 
-Download the dataset from Kaggle and place the CSV file in the correct project directory.
+### Step 5: Download the Dataset
 
-Ensure that the filename matches the one used in the Python code.
+Download the dataset from:
 
-Step 5: Run the Application
+[https://www.kaggle.com/datasets/datascikhan/supermarket](https://www.kaggle.com/datasets/datascikhan/supermarket)
 
-Run the following command:
+Place the required CSV files in the project directory. Use the filenames expected by the Python scripts:
 
+- `supermarket_large_dataset.csv`
+- `supermarket_cleaned_dataset.csv`
+
+Run the data cleaning script if you need to generate the cleaned dataset:
+
+```bash
+python data_cleaning.py
+```
+
+### Step 6: Run the Application
+
+```bash
 python app.py
+```
 
-Step 6: Open the Dashboard
+### Step 7: Open the Dashboard
 
-Open a web browser and visit:
+Open your browser and visit:
 
+```text
 http://127.0.0.1:5000
+```
 
-The Supermarket Sales Analysis Dashboard should appear.
+## 📊 Data Analysis Process
 
-📈 Data Analysis Process
+1. Import the supermarket dataset using Pandas.
+2. Inspect the dataset and understand its columns.
+3. Clean and prepare the data.
+4. Analyze sales and profit information.
+5. Calculate total revenue, gross profit, and orders.
+6. Analyze product category performance.
+7. Generate monthly sales and profit visualizations.
+8. Identify important business insights.
+9. Display the results through a Flask dashboard.
 
-1. Import the dataset using Pandas.
-2. Load and inspect the sales data.
-3. Clean and prepare the data as required.
-4. Calculate sales and profit metrics.
-5. Determine the number of orders using the available order information.
-6. Calculate the profit margin.
-7. Prepare the data required for visualizations.
-8. Generate sales and profit charts.
-9. Display the results on the Flask dashboard.
+## 💡 Project Benefits
 
-💡 Project Benefits
+- Makes supermarket sales data easier to understand.
+- Helps analyze sales and profit performance.
+- Identifies top-performing product categories.
+- Presents key business metrics in one dashboard.
+- Demonstrates practical data analysis skills.
+- Provides experience in Python-based dashboard development.
 
-- Makes sales information easier to understand.
-- Helps summarize sales and profit performance.
-- Presents important metrics in a single dashboard.
-- Demonstrates practical Python and Pandas skills.
-- Provides experience with Flask-based web development.
-- Demonstrates data visualization techniques.
-
-🎓 Skills Demonstrated
+## 🎓 Skills Demonstrated
 
 - Python Programming
 - Data Analysis
 - Data Cleaning
 - Pandas
+- Exploratory Data Analysis (EDA)
 - Data Visualization
 - Flask Web Development
 - HTML and CSS
 - JavaScript
 - Chart.js
-- Working with CSV datasets
+- Working with CSV Datasets
+- Git and GitHub
 
-🚀 Future Enhancements
+## 🚀 Future Enhancements
 
 - Add interactive date filters.
 - Introduce product category comparisons.
 - Add monthly and yearly sales analysis.
-- Include additional business performance metrics.
+- Include customer segmentation analysis.
 - Add downloadable reports.
 - Improve dashboard responsiveness.
 - Deploy the application online.
 
-🏁 Conclusion
+## 🏁 Conclusion
 
-The Supermarket Sales Analysis Dashboard demonstrates how Python, Pandas, and visualization tools can be used to analyze supermarket sales data and present key business metrics through a web application.
+The Supermarket Sales Analysis Dashboard demonstrates how Python, Pandas, and visualization tools can be used to analyze supermarket sales data and present meaningful business insights through an interactive web application.
 
-The project provides practical experience in data analysis, visualization, and dashboard development.
+This project provides practical experience in data cleaning, exploratory data analysis, visualization, and dashboard development.
 
-👩‍💻 Author
+## 👩‍💻 Author
 
-Developed as a Supermarket Sales Analysis project using Python and data visualization technologies.
+Developed as a **Supermarket Sales Analysis** project.
+
+**GitHub Repository:**  
+https://github.com/dharshu33666-debug/Supermarket-Sales-Analysis
+
+**Dataset Source:**  
+https://www.kaggle.com/datasets/datascikhan/supermarket
