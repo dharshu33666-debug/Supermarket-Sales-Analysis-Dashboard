@@ -142,7 +142,9 @@ Install Python 3 on your computer.
 ### Step 2: Clone the Repository
 
 ```bash
-https://github.com/dharshu33666-debug/Supermarket-Sales-Analysis-Dashboard
+git clone https://github.com/dharshu33666-debug/Supermarket-Sales-Analysis-Dashboard.git
+
+cd Supermarket-Sales-Analysis-Dashboard
 ```
 
 Navigate to the project directory:
@@ -256,8 +258,9 @@ The project combines sales performance analysis, profit analysis, and customer i
 Developed as a **Supermarket Sales Analysis – Data Analyst Project**.
 
 **GitHub Repository:**  
-https://github.com/dharshu33666-debug/Supermarket-Sales-Analysis
+git clone https://github.com/dharshu33666-debug/Supermarket-Sales-Analysis-Dashboard.git
 
+cd Supermarket-Sales-Analysis-Dashboard
 **Dataset Source:**  
 https://www.kaggle.com/datasets/datascikhan/supermarket
 
@@ -280,3 +283,7 @@ Dashboard Screenshots
 
 ### 6. Key Business Insights
 ![Key Insights](https://raw.githubusercontent.com/dharshu33666-debug/Supermarket-Sales-Analysis/main/screenshots/key_insight.png.png)
+
+📊 Supermarket Sales Analysis Dashboard
+
+An interactive Supermarket Sales Analysis Dashboard developed using Python, Pandas, Flask, and Chart.js. This project focuses on analyzing supermarket sales data, tracking revenue and profit, identifying customer trends, and generating meaningful business insights through interactive visualizations.
