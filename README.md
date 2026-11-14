@@ -149,9 +149,6 @@ cd Supermarket-Sales-Analysis-Dashboard
 
 ```
 
-Navigate to the project directory:
-
-```bash
 ```
 
 ### Step 3: Create a Virtual Environment
