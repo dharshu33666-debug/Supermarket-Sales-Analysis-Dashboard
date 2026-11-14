@@ -284,6 +284,6 @@ Dashboard Screenshots
 ### 6. Key Business Insights
 ![Key Insights](https://raw.githubusercontent.com/dharshu33666-debug/Supermarket-Sales-Analysis/main/screenshots/key_insight.png.png)
 
-📊 Supermarket Sales Analysis Dashboard
+## 📊 Description
 
-An interactive Supermarket Sales Analysis Dashboard developed using Python, Pandas, Flask, and Chart.js. This project focuses on analyzing supermarket sales data, tracking revenue and profit, identifying customer trends, and generating meaningful business insights through interactive visualizations.
+Supermarket Sales Analysis Dashboard is a web-based project developed using Python, Pandas, Flask, and Chart.js. It helps analyze sales, profit, revenue, and customer trends through interactive charts and visualizations.
