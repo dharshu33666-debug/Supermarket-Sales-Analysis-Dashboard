@@ -251,3 +251,22 @@ https://github.com/dharshu33666-debug/Supermarket-Sales-Analysis
 
 **Dataset Source:**  
 https://www.kaggle.com/datasets/datascikhan/supermarket
+## 📸 Dashboard Screenshots
+
+### Dashboard Overview
+![Dashboard](screenshots/dashboard_overview.png)
+
+### Sales Analysis
+![Sales Analysis](screenshots/sales_analysis.png)
+
+### Monthly Sales Analysis
+![Monthly Sales](screenshots/monthly_sales.png)
+
+### Product Analysis
+![Product Analysis](screenshots/product_analysis.png)
+
+### Customer Analysis
+![Customer Analysis](screenshots/customer_analysis.png)
+
+### Key Business Insights
+![Key Insights](screenshots/key_insights.png)
