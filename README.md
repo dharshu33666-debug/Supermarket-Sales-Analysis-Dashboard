@@ -144,7 +144,7 @@ Install Python 3 on your computer.
 ```bash
 git clone https://github.com/dharshu33666-debug/Supermarket-Sales-Analysis-Dashboard.git
 
-cd Supermarket-Sales-Analysis-Dashboard
+
 ```
 
 Navigate to the project directory:
@@ -267,23 +267,21 @@ https://www.kaggle.com/datasets/datascikhan/supermarket
 Dashboard Screenshots
 
 ### 1. Dashboard Overview
-![Dashboard Overview](https://raw.githubusercontent.com/dharshu33666-debug/Supermarket-Sales-Analysis/main/screenshots/dashboard_overview.png.png)
+![Dashboard Overview](https://raw.githubusercontent.com/dharshu33666-debug/Supermarket-Sales-Analysis-Dashboard/main/screenshots/dashboard_overview.png.png)
 
 ### 2. Sales Analysis
-![Sales Analysis](https://raw.githubusercontent.com/dharshu33666-debug/Supermarket-Sales-Analysis/main/screenshots/sales_analysis.png.png)
+![Sales Analysis](https://raw.githubusercontent.com/dharshu33666-debug/Supermarket-Sales-Analysis-Dashboard/main/screenshots/sales_analysis.png.png)
 
 ### 3. Monthly Sales Analysis
-![Monthly Sales](https://raw.githubusercontent.com/dharshu33666-debug/Supermarket-Sales-Analysis/main/screenshots/monthly_sales.png.png)
+![Monthly Sales](https://raw.githubusercontent.com/dharshu33666-debug/Supermarket-Sales-Analysis-Dashboard/main/screenshots/monthly_sales.png.png)
 
 ### 4. Product Analysis
-![Product Analysis](https://raw.githubusercontent.com/dharshu33666-debug/Supermarket-Sales-Analysis/main/screenshots/product_analysis.png.png)
+![Product Analysis](https://raw.githubusercontent.com/dharshu33666-debug/Supermarket-Sales-Analysis-Dashboard/main/screenshots/product_analysis.png.png)
 
 ### 5. Customer Analysis
-![Customer Analysis](https://raw.githubusercontent.com/dharshu33666-debug/Supermarket-Sales-Analysis/main/screenshots/customer_analysis.png.png)
+![Customer Analysis](https://raw.githubusercontent.com/dharshu33666-debug/Supermarket-Sales-Analysis-Dashboard/main/screenshots/customer_analysis.png.png)
 
 ### 6. Key Business Insights
-![Key Insights](https://raw.githubusercontent.com/dharshu33666-debug/Supermarket-Sales-Analysis/main/screenshots/key_insight.png.png)
+![Key Insights](https://raw.githubusercontent.com/dharshu33666-debug/Supermarket-Sales-Analysis-Dashboard/main/screenshots/key_insight.png.png)
 
-## 📊 Description
 
-Supermarket Sales Analysis Dashboard is a web-based project developed using Python, Pandas, Flask, and Chart.js. It helps analyze sales, profit, revenue, and customer trends through interactive charts and visualizations.
