@@ -129,6 +129,7 @@ Supermarket-Sales-Analysis/
     ├── customer_analysis.png
     └── key_insights.png
 
+
 **Note:** Large dataset CSV files are stored locally and excluded from GitHub using `.gitignore`.
 
 ## ⚙️ Installation and Setup
