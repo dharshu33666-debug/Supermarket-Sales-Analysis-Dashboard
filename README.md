@@ -85,18 +85,36 @@ The dashboard displays important business metrics:
 - Customer Segment Analysis
 - Top 10 Customers by Sales
 
-## 📈 Key Business Insights
+ ## 💡 Key Business Insights
 
+### 1. Sales & Profitability Analysis
 - Total Sales Revenue: ₹9,995,644.58
 - Total Gross Profit: ₹3,770,441.83
-- Total Orders: 45,500
-- Total Customers: 75,799
-- Profit Margin: 37.72%
-- Top Sales Category: Grocery – ₹506,229.87
-- Highest Spending Customer: C00021594 – ₹2,274.72
-- Top Selling Product: Product_3015 – ₹26,182.43
+- Overall Profit Margin: 37.72%
+- The business generated a gross profit margin of 37.72%, indicating positive overall profitability.
 
-These insights help understand sales performance, product contribution, and customer purchasing behavior.
+### 2. Category Performance Analysis
+- Grocery recorded the highest sales revenue of ₹506,229.87.
+- Grocery also achieved the highest gross profit among the categories shown in the dashboard.
+- This highlights Grocery as a major contributor to supermarket performance.
+
+### 3. Product Performance Analysis
+- Product_3015 was identified as the top-selling product.
+- Generated total sales revenue of ₹26,182.43.
+- Identifying top-performing products can help improve inventory and sales strategies.
+
+### 4. Customer Behavior Analysis
+- Customer C00021594 recorded the highest spending of ₹2,274.72.
+- The 36–45 age group represented the largest customer segment by count.
+- Customer segmentation helps understand purchasing patterns and improve marketing strategies.
+
+### 5. Monthly Sales Trend Analysis
+- Analyzed monthly sales performance from January 2023 to December 2024.
+- Observed relatively stable sales revenue with month-to-month fluctuations.
+- Monthly trend analysis helps monitor business performance over time.
+
+### 📌 Key Takeaway
+The analysis highlights overall profitability, strong Grocery category performance, top-selling products, and customer purchasing patterns. These insights can support better inventory planning, marketing decisions, and business strategy.
 
 ## 📂 Project Structure
 
