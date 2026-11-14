@@ -263,21 +263,19 @@ https://www.kaggle.com/datasets/datascikhan/supermarket
 ## 📸 Dashboard Screenshots
 
 ### 1. Dashboard Overview
-![Dashboard Overview](screenshots/dashboard_overview.png)
+![Dashboard Overview](./dashboard_overview.png.png)
 
 ### 2. Sales Analysis
-![Sales Analysis](screenshots/sales_analysis.png)
+![Sales Analysis](./sales_analysis.png.png)
 
 ### 3. Monthly Sales Analysis
-![Monthly Sales](screenshots/monthly_sales.png)
+![Monthly Sales](./monthly_sales.png.png)
 
 ### 4. Product Analysis
-![Product Analysis](screenshots/product_analysis.png)
+![Product Analysis](./product_analysis.png.png)
 
 ### 5. Customer Analysis
-![Customer Analysis](screenshots/customer_analysis.png)
+![Customer Analysis](./customer_analysis.png.png)
 
 ### 6. Key Business Insights
-![Key Insights](screenshots/key_insights.png)
-### Key Business Insights
-![Key Insights](screenshots/key_insights.png)
+![Key Insights](./key_insight.png.png)
