@@ -145,7 +145,7 @@ Install Python 3 on your computer.
 git clone https://github.com/dharshu33666-debug/Supermarket-Sales-Analysis-Dashboard.git
 
 cd Supermarket-Sales-Analysis-Dashboard
-
+```
 
 ### Step 3: Create a Virtual Environment
 
