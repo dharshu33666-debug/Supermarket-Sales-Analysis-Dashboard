@@ -128,6 +128,7 @@ Supermarket-Sales-Analysis/
     ├── product_analysis.png
     ├── customer_analysis.png
     └── key_insights.png
+```
 
 
 **Note:** Large dataset CSV files are stored locally and excluded from GitHub using `.gitignore`.
