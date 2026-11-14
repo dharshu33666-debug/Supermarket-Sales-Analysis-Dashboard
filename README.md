@@ -142,7 +142,7 @@ Install Python 3 on your computer.
 ### Step 2: Clone the Repository
 
 ```bash
-git clone https://github.com/dharshu33666-debug/Supermarket-Sales-Analysis.git
+https://github.com/dharshu33666-debug/Supermarket-Sales-Analysis-Dashboard
 ```
 
 Navigate to the project directory:
