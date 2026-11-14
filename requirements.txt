@@ -1,5 +1,5 @@
 pandas
-numpay
+numpy
 matplotlib
 seaborn
 flask
