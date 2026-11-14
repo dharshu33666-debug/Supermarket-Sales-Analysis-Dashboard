@@ -147,10 +147,6 @@ git clone https://github.com/dharshu33666-debug/Supermarket-Sales-Analysis-Dashb
 cd Supermarket-Sales-Analysis-Dashboard
 
 
-```
-
-```
-
 ### Step 3: Create a Virtual Environment
 
 ```bash
