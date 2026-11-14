@@ -4,52 +4,54 @@
 
 ## 📌 Project Overview
 
-The **Supermarket Sales Analysis Dashboard** is a Data Analyst project developed using Python, Pandas, Flask, HTML, CSS, JavaScript, and Chart.js.
+The Supermarket Sales Analysis Dashboard is a Data Analyst project developed using Python, Pandas, Flask, HTML, CSS, JavaScript, and Chart.js.
 
 This project analyzes supermarket sales data to understand business performance, product category performance, profitability, and customer purchasing behavior.
 
-The dataset is cleaned and analyzed using Python and Pandas. The results are presented through an interactive web dashboard containing summary cards, charts, and key business insights.
+The results are presented through an interactive web dashboard containing summary cards, charts, and key business insights.
 
 ## 🎯 Project Objectives
 
 - Analyze supermarket sales data.
 - Calculate total sales revenue and gross profit.
-- Identify total orders, transactions, and customers.
+- Identify total orders and transactions.
 - Analyze category-wise sales and profit.
 - Understand monthly sales trends.
 - Analyze customer demographics and purchasing behavior.
-- Identify top customers based on sales.
-- Present meaningful business insights through an interactive dashboard.
+- Identify top-selling products and customers.
+- Present meaningful business insights.
 
 ## 📊 Dataset
 
-- **Dataset Source:** [Kaggle – Supermarket Dataset](https://www.kaggle.com/datasets/datascikhan/supermarket)
-- **Dataset File:** `supermarket_large_dataset.csv`
-- **File Format:** CSV
+- Dataset Source: Kaggle
+- Dataset File: supermarket_large_dataset.csv
+- File Format: CSV
 
-The dataset contains supermarket transaction information, customer details, product information, sales, profit, inventory, and other business-related attributes.
+Dataset Link:
+https://www.kaggle.com/datasets/datascikhan/supermarket
 
-**Note:** The original and cleaned CSV files are not included in this GitHub repository because of their large file sizes. Download the dataset from Kaggle and place the required files in the project directory before running the application.
+Note: Dataset files are excluded from this repository because of their large file sizes. Download the dataset and place the required CSV files in the project directory.
 
 ## 🛠️ Technologies Used
 
 | Technology | Purpose |
 |---|---|
-| Python | Programming and data processing |
-| Pandas | Data cleaning and analysis |
-| Flask | Web application framework |
-| Matplotlib | Data visualization |
-| HTML | Dashboard structure |
-| CSS | Dashboard styling |
-| JavaScript | Interactive functionality |
-| Chart.js | Interactive charts |
-| CSV | Dataset storage |
+| Python | Programming |
+| Pandas | Data Cleaning and Analysis |
+| NumPy | Numerical Operations |
+| Flask | Web Application |
+| Matplotlib | Data Visualization |
+| Seaborn | Statistical Visualization |
+| HTML | Dashboard Structure |
+| CSS | Dashboard Styling |
+| JavaScript | Interactive Functionality |
+| Chart.js | Interactive Charts |
 
 ## ✨ Dashboard Features
 
 ### 1. Sales Overview
 
-The dashboard displays the following important business metrics:
+The dashboard displays important business metrics:
 
 | Metric | Result |
 |---|---:|
@@ -67,36 +69,34 @@ The dashboard displays the following important business metrics:
 - Category-wise Sales Revenue
 - Category-wise Gross Profit
 
-These charts help compare product categories based on their sales and profitability.
-
 ### 3. Monthly Sales Analysis
 
 - Monthly Sales Revenue Trend
 
-This visualization helps understand sales performance across different months.
+### 4. Product Analysis
 
-### 4. Customer Analysis
+- Top 10 Products by Sales
+- Product-wise Sales Performance
+
+### 5. Customer Analysis
 
 - Gender-wise Customer Analysis
 - Age Group-wise Customer Analysis
 - Customer Segment Analysis
 - Top 10 Customers by Sales
 
-These visualizations provide insights into customer demographics, purchasing patterns, and customer contribution to sales.
-
 ## 📈 Key Business Insights
 
-The analysis provides the following business insights:
+- Total Sales Revenue: ₹9,995,644.58
+- Total Gross Profit: ₹3,770,441.83
+- Total Orders: 45,500
+- Total Customers: 75,799
+- Profit Margin: 37.72%
+- Top Sales Category: Grocery – ₹506,229.87
+- Highest Spending Customer: C00021594 – ₹2,274.72
+- Top Selling Product: Product_3015 – ₹26,182.43
 
-- **Total Sales Revenue:** ₹9,995,644.58
-- **Total Gross Profit:** ₹3,770,441.83
-- **Total Orders:** 45,500
-- **Total Customers:** 75,799
-- **Profit Margin:** 37.72%
-- **Top Sales Category:** Grocery – ₹506,229.87
-- **Highest Spending Customer:** C00021594 – ₹2,274.72
-
-*Note: These values represent the results obtained from the dataset used in this project.*
+These insights help understand sales performance, product contribution, and customer purchasing behavior.
 
 ## 📂 Project Structure
 
@@ -107,20 +107,27 @@ Supermarket-Sales-Analysis/
 ├── data_cleaning.py
 ├── sales_analysis.py
 ├── sales_summary.csv
-├── README.md
 ├── requirements.txt
+├── README.md
 ├── .gitignore
 │
 ├── templates/
 │   └── index.html
 │
-└── static/
-    ├── category_sales_chart.png
-    ├── monthly_sales_chart.png
-    ├── profit_chart.png
-    ├── sales_revenue_chart.png
-    └── top_products_chart.png
-```
+├── static/
+│   ├── category_sales_chart.png
+│   ├── monthly_sales_chart.png
+│   ├── profit_chart.png
+│   ├── sales_revenue_chart.png
+│   └── top_products_chart.png
+│
+└── screenshots/
+    ├── dashboard_overview.png
+    ├── sales_analysis.png
+    ├── monthly_sales.png
+    ├── product_analysis.png
+    ├── customer_analysis.png
+    └── key_insights.png
 
 **Note:** Large dataset CSV files are stored locally and excluded from GitHub using `.gitignore`.
 
