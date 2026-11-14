@@ -260,22 +260,23 @@ https://github.com/dharshu33666-debug/Supermarket-Sales-Analysis
 
 **Dataset Source:**  
 https://www.kaggle.com/datasets/datascikhan/supermarket
-## 📸 Dashboard Screenshots
+
+Dashboard Screenshots
 
 ### 1. Dashboard Overview
-![Dashboard Overview](./dashboard_overview.png.png)
+![Dashboard Overview](https://raw.githubusercontent.com/dharshu33666-debug/Supermarket-Sales-Analysis/main/screenshots/dashboard_overview.png.png)
 
 ### 2. Sales Analysis
-![Sales Analysis](./sales_analysis.png.png)
+![Sales Analysis](https://raw.githubusercontent.com/dharshu33666-debug/Supermarket-Sales-Analysis/main/screenshots/sales_analysis.png.png)
 
 ### 3. Monthly Sales Analysis
-![Monthly Sales](./monthly_sales.png.png)
+![Monthly Sales](https://raw.githubusercontent.com/dharshu33666-debug/Supermarket-Sales-Analysis/main/screenshots/monthly_sales.png.png)
 
 ### 4. Product Analysis
-![Product Analysis](./product_analysis.png.png)
+![Product Analysis](https://raw.githubusercontent.com/dharshu33666-debug/Supermarket-Sales-Analysis/main/screenshots/product_analysis.png.png)
 
 ### 5. Customer Analysis
-![Customer Analysis](./customer_analysis.png.png)
+![Customer Analysis](https://raw.githubusercontent.com/dharshu33666-debug/Supermarket-Sales-Analysis/main/screenshots/customer_analysis.png.png)
 
 ### 6. Key Business Insights
-![Key Insights](./key_insight.png.png)
+![Key Insights](https://raw.githubusercontent.com/dharshu33666-debug/Supermarket-Sales-Analysis/main/screenshots/key_insight.png.png)
