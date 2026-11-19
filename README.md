@@ -314,11 +314,13 @@ http://127.0.0.1:5000
 
 ### 6. Regional Sales Analysis
 
-![Regional Analysis](screenshots/regional_analysis.png)
+![Regional Analysis](screenshots/regional_analysis.png.png)
 
 ### 7. Key Business Insights
 
-![Business Insights](screenshots/business_insights.png)
+### 7. Key Business Insights
+
+![Business Insights](screenshots/business_insights.png.png)
 
 ### 8. Business Recommendations
 
