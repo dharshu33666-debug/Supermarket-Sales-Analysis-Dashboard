@@ -294,29 +294,28 @@ http://127.0.0.1:5000
 
 ### 1. Dashboard Overview
 
-![Dashboard Overview](screenshots/dashboard_overview.png)
+![Dashboard Overview](screenshots/dashboard_overview.png.png)
 
 ### 2. Sales Analysis
 
-![Sales Analysis](screenshots/sales_analysis.png)
+![Sales Analysis](screenshots/sales_analysis.png.png)
 
 ### 3. Monthly Sales Analysis
 
-![Monthly Sales](screenshots/monthly_sales.png)
+![Monthly Sales](screenshots/monthly_sales.png.png)
 
 ### 4. Product Analysis
 
-![Product Analysis](screenshots/product_analysis.png)
+![Product Analysis](screenshots/product_analysis.png.png)
 
 ### 5. Customer Analysis
 
-![Customer Analysis](screenshots/customer_analysis.png)
+![Customer Analysis](screenshots/customer_analysis.png.png)
 
 ### 6. Regional Sales Analysis
 
 ![Regional Analysis](screenshots/regional_analysis.png.png)
 
-### 7. Key Business Insights
 
 ### 7. Key Business Insights
 
@@ -324,7 +323,7 @@ http://127.0.0.1:5000
 
 ### 8. Business Recommendations
 
-![Business Recommendations](screenshots/business_recommendations.png)
+![Business Recommendations](screenshots/business_recommendations.png.png)
 
 ## 🎓 Skills Demonstrated
 
