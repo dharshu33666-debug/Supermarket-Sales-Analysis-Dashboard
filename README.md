@@ -1,14 +1,15 @@
+
 # 🛒 Supermarket Sales Analysis Dashboard
 
-**Sales Performance | Profit Analysis | Customer Insights**
+**Sales Performance | Profit Analysis | Customer Insights | Business Recommendations**
 
 ## 📌 Project Overview
 
-The Supermarket Sales Analysis Dashboard is a Data Analyst project developed using Python, Pandas, Flask, HTML, CSS, JavaScript, and Chart.js.
+The **Supermarket Sales Analysis Dashboard** is a Data Analyst project developed using Python, Pandas, Flask, HTML, CSS, JavaScript, and Chart.js.
 
-This project analyzes supermarket sales data to understand business performance, product category performance, profitability, and customer purchasing behavior.
+This project analyzes supermarket sales data to understand business performance, product category performance, profitability, regional performance, and customer purchasing behavior.
 
-The results are presented through an interactive web dashboard containing summary cards, charts, and key business insights.
+The results are presented through an interactive web dashboard containing summary cards, charts, key business insights, and business recommendations.
 
 ## 🎯 Project Objectives
 
@@ -19,18 +20,19 @@ The results are presented through an interactive web dashboard containing summar
 - Understand monthly sales trends.
 - Analyze customer demographics and purchasing behavior.
 - Identify top-selling products and customers.
-- Present meaningful business insights.
+- Compare sales and profit across different regions.
+- Generate meaningful business insights and recommendations.
 
 ## 📊 Dataset
 
-- Dataset Source: Kaggle
-- Dataset File: supermarket_large_dataset.csv
-- File Format: CSV
+- **Dataset Source:** Kaggle
+- **Dataset File:** `supermarket_large_dataset.csv`
+- **File Format:** CSV
 
-Dataset Link:
+**Dataset Link:**  
 https://www.kaggle.com/datasets/datascikhan/supermarket
 
-Note: Dataset files are excluded from this repository because of their large file sizes. Download the dataset and place the required CSV files in the project directory.
+**Note:** Dataset files are excluded from this repository because of their large file sizes. Download the dataset and place the required CSV files in the project directory.
 
 ## 🛠️ Technologies Used
 
@@ -46,12 +48,11 @@ Note: Dataset files are excluded from this repository because of their large fil
 | CSS | Dashboard Styling |
 | JavaScript | Interactive Functionality |
 | Chart.js | Interactive Charts |
+| Git & GitHub | Version Control |
 
 ## ✨ Dashboard Features
 
 ### 1. Sales Overview
-
-The dashboard displays important business metrics:
 
 | Metric | Result |
 |---|---:|
@@ -72,6 +73,7 @@ The dashboard displays important business metrics:
 ### 3. Monthly Sales Analysis
 
 - Monthly Sales Revenue Trend
+- Monthly performance from January 2023 to December 2024
 
 ### 4. Product Analysis
 
@@ -85,41 +87,102 @@ The dashboard displays important business metrics:
 - Customer Segment Analysis
 - Top 10 Customers by Sales
 
- ## 💡 Key Business Insights
+### 6. Regional Sales Analysis
+
+- Region-wise Sales Revenue
+- Region-wise Gross Profit
+- Comparison of performance across five regions
+
+### 7. Key Business Insights
+
+The dashboard highlights important findings from supermarket sales, profitability, product performance, customer behavior, and regional performance.
+
+### 8. Business Recommendations
+
+The dashboard provides practical suggestions to improve sales, inventory management, customer engagement, and profitability.
+
+## 💡 Key Business Insights
 
 ### 1. Sales & Profitability Analysis
+
 - Total Sales Revenue: ₹9,995,644.58
 - Total Gross Profit: ₹3,770,441.83
 - Overall Profit Margin: 37.72%
 - The business generated a gross profit margin of 37.72%, indicating positive overall profitability.
 
 ### 2. Category Performance Analysis
+
 - Grocery recorded the highest sales revenue of ₹506,229.87.
 - Grocery also achieved the highest gross profit among the categories shown in the dashboard.
 - This highlights Grocery as a major contributor to supermarket performance.
 
 ### 3. Product Performance Analysis
+
 - Product_3015 was identified as the top-selling product.
 - Generated total sales revenue of ₹26,182.43.
 - Identifying top-performing products can help improve inventory and sales strategies.
 
 ### 4. Customer Behavior Analysis
+
 - Customer C00021594 recorded the highest spending of ₹2,274.72.
 - The 36–45 age group represented the largest customer segment by count.
 - Customer segmentation helps understand purchasing patterns and improve marketing strategies.
 
 ### 5. Monthly Sales Trend Analysis
+
 - Analyzed monthly sales performance from January 2023 to December 2024.
 - Observed relatively stable sales revenue with month-to-month fluctuations.
 - Monthly trend analysis helps monitor business performance over time.
 
+### 6. Regional Sales Analysis
+
+- East region recorded the highest sales revenue of ₹2,509,079.94.
+- South region recorded sales revenue of ₹2,216,224.74.
+- North region recorded sales revenue of ₹1,801,723.84.
+- Central region recorded sales revenue of ₹1,791,990.77.
+- West region recorded the lowest sales revenue of ₹1,676,625.29.
+- East is the leading region, while West has an opportunity for improvement.
+
 ### 📌 Key Takeaway
-The analysis highlights overall profitability, strong Grocery category performance, top-selling products, and customer purchasing patterns. These insights can support better inventory planning, marketing decisions, and business strategy.
+
+The analysis highlights overall profitability, strong Grocery category performance, top-selling products, customer purchasing patterns, and regional sales differences.
+
+## 📋 Business Recommendations
+
+### 1. Improve Grocery Sales
+
+Grocery is the top-performing sales category. Maintain sufficient stock, improve product availability, and introduce attractive grocery offers.
+
+**Priority:** High
+
+### 2. Focus on East Region
+
+East region generates the highest sales revenue. Continue successful sales strategies and maintain customer satisfaction in this region.
+
+**Priority:** High
+
+### 3. Improve West Region Sales
+
+West region has the lowest sales revenue among the five regions. Study customer demand and improve product availability and promotions.
+
+**Priority:** Medium
+
+### 4. Increase Average Order Value
+
+The current Average Order Value is ₹219.68. Introduce combo offers, discounts, and cross-selling strategies to encourage larger purchases.
+
+**Priority:** Medium
+
+### 5. Maintain Profit Margin
+
+The current Profit Margin is 37.72%. Monitor operating costs, manage inventory efficiently, and maintain profitable pricing strategies.
+
+**Priority:** High
 
 ## 📂 Project Structure
 
 ```text
-Supermarket-Sales-Analysis/
+Supermarket-Sales-Analysis-Dashboard/
 │
 ├── app.py
 ├── data_cleaning.py
@@ -145,11 +208,12 @@ Supermarket-Sales-Analysis/
     ├── monthly_sales.png
     ├── product_analysis.png
     ├── customer_analysis.png
-    └── key_insights.png
+    ├── regional_analysis.png
+    ├── business_insights.png
+    └── business_recommendations.png
 ```
 
-
-**Note:** Large dataset CSV files are stored locally and excluded from GitHub using `.gitignore`.
+**Note:** Keep only filenames that actually exist in your project folder. Large dataset CSV files are stored locally and excluded from GitHub using `.gitignore`.
 
 ## ⚙️ Installation and Setup
 
@@ -221,17 +285,44 @@ http://127.0.0.1:5000
 7. Analyze monthly sales trends.
 8. Perform customer demographic analysis.
 9. Identify top customers by sales.
-10. Generate charts and business insights.
-11. Present the results through a Flask dashboard.
+10. Compare region-wise sales and gross profit.
+11. Generate charts and business insights.
+12. Prepare business recommendations.
+13. Present the results through a Flask dashboard.
 
-## 💡 Project Benefits
+## 📸 Dashboard Screenshots
 
-- Helps understand supermarket business performance.
-- Identifies profitable product categories.
-- Provides insights into customer purchasing behavior.
-- Makes sales and profit information easier to understand.
-- Presents multiple business metrics in one dashboard.
-- Demonstrates practical data analysis and visualization skills.
+### 1. Dashboard Overview
+
+![Dashboard Overview](screenshots/dashboard_overview.png)
+
+### 2. Sales Analysis
+
+![Sales Analysis](screenshots/sales_analysis.png)
+
+### 3. Monthly Sales Analysis
+
+![Monthly Sales](screenshots/monthly_sales.png)
+
+### 4. Product Analysis
+
+![Product Analysis](screenshots/product_analysis.png)
+
+### 5. Customer Analysis
+
+![Customer Analysis](screenshots/customer_analysis.png)
+
+### 6. Regional Sales Analysis
+
+![Regional Analysis](screenshots/regional_analysis.png)
+
+### 7. Key Business Insights
+
+![Business Insights](screenshots/business_insights.png)
+
+### 8. Business Recommendations
+
+![Business Recommendations](screenshots/business_recommendations.png)
 
 ## 🎓 Skills Demonstrated
 
@@ -240,9 +331,11 @@ http://127.0.0.1:5000
 - Data Analysis
 - Exploratory Data Analysis (EDA)
 - Pandas
+- NumPy
 - Data Visualization
 - Customer Analysis
 - Sales and Profit Analysis
+- Regional Analysis
 - Flask Web Development
 - HTML and CSS
 - JavaScript
@@ -263,37 +356,16 @@ http://127.0.0.1:5000
 
 The **Supermarket Sales Analysis Dashboard** demonstrates how Python, Pandas, and visualization tools can be used to analyze supermarket data and generate meaningful business insights.
 
-The project combines sales performance analysis, profit analysis, and customer insights in an interactive dashboard. It provides practical experience in data analytics, data visualization, and web-based dashboard development.
+The project combines sales performance analysis, profit analysis, customer insights, regional comparisons, and business recommendations in an interactive dashboard.
+
+It provides practical experience in data analytics, data visualization, and web-based dashboard development.
 
 ## 👩‍💻 Author
 
 Developed as a **Supermarket Sales Analysis – Data Analyst Project**.
 
 **GitHub Repository:**  
-git clone https://github.com/dharshu33666-debug/Supermarket-Sales-Analysis-Dashboard.git
+https://github.com/dharshu33666-debug/Supermarket-Sales-Analysis-Dashboard
 
-cd Supermarket-Sales-Analysis-Dashboard
 **Dataset Source:**  
 https://www.kaggle.com/datasets/datascikhan/supermarket
-
-Dashboard Screenshots
-
-### 1. Dashboard Overview
-![Dashboard Overview](https://raw.githubusercontent.com/dharshu33666-debug/Supermarket-Sales-Analysis-Dashboard/main/screenshots/dashboard_overview.png.png)
-
-### 2. Sales Analysis
-![Sales Analysis](https://raw.githubusercontent.com/dharshu33666-debug/Supermarket-Sales-Analysis-Dashboard/main/screenshots/sales_analysis.png.png)
-
-### 3. Monthly Sales Analysis
-![Monthly Sales](https://raw.githubusercontent.com/dharshu33666-debug/Supermarket-Sales-Analysis-Dashboard/main/screenshots/monthly_sales.png.png)
-
-### 4. Product Analysis
-![Product Analysis](https://raw.githubusercontent.com/dharshu33666-debug/Supermarket-Sales-Analysis-Dashboard/main/screenshots/product_analysis.png.png)
-
-### 5. Customer Analysis
-![Customer Analysis](https://raw.githubusercontent.com/dharshu33666-debug/Supermarket-Sales-Analysis-Dashboard/main/screenshots/customer_analysis.png.png)
-
-### 6. Key Business Insights
-![Key Insights](https://raw.githubusercontent.com/dharshu33666-debug/Supermarket-Sales-Analysis-Dashboard/main/screenshots/key_insight.png.png)
-
-
